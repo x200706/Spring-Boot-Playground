@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: SpringBootDB369
+    url: jdbc:postgresql://db.xrizljdyaoyvzcavgbol.supabase.co:5432/postgres
