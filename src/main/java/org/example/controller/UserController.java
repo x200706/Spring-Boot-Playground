@@ -32,7 +32,7 @@ public class UserController {
 
     @GetMapping(value = "userlist", produces = MediaType.APPLICATION_JSON_VALUE)
     public String userList() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper(); //TODO這東西賊耗能的應該做成一個單例:(
 
         UserListModel userListModel = new UserListModel();
 
