@@ -4,3 +4,11 @@ spring:
     username: postgres
     password: SpringBootDB369
     url: jdbc:postgresql://db.xrizljdyaoyvzcavgbol.supabase.co:5432/postgres
+  mvc:
+    view:
+        prefix: /WEB-INF/jsp/
+        suffix: .jsp
+logging:
+  level:
+    org:
+      springframework: DEBUG

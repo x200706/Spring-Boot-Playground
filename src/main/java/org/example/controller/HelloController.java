@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,5 +30,9 @@ public class HelloController {
         StringBuilder sb = new StringBuilder();
         sb.append("<h1>超古早味</h1>");
         return sb.toString();
+    }
+    @GetMapping(value = "jsptest")
+    public String helloJSP(){
+        return "jsptest";
     }
 }
