@@ -2,6 +2,8 @@ package org.example.JPA.dao;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.example.JPA.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -15,6 +17,7 @@ public interface UserDao extends JpaRepository<UserEntity,String> {
     List<UserEntity> findByJPQL(int len);
 
     @Modifying
+    @Transactional
     @Query("update UserEntity u set u.name = ?1 where username = ?2")
     int updateByJPQL(String name, String username);
 }
