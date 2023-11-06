@@ -2,6 +2,8 @@ package org.example.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.example.JPA.dao.UserDao;
 import org.example.JPA.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,11 @@ public class UserService {
 
     public List<UserEntity> findByJPQL(int len){
         return userDao.findByJPQL(len);
+    }
+
+    @Transactional
+    public int updateByJPQL(String name, String username){
+        return userDao.updateByJPQL(name, username);
     }
     
 }

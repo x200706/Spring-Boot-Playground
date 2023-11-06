@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -65,6 +66,11 @@ public class UserController {
     @RequestMapping("JPQLTest")
     public Object JPQLTest(@RequestParam int len){
         return userService.findByJPQL(len);
+    }
+
+    @PutMapping("JPQLTest")
+    public Object JPQLPutTest(@RequestParam String name, @RequestParam String username){
+        return userService.updateByJPQL(name, username);
     }
 
 }
