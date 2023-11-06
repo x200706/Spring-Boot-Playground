@@ -4,14 +4,16 @@ spring:
     username: postgres
     password: SpringBootDB369
     url: jdbc:postgresql://db.xrizljdyaoyvzcavgbol.supabase.co:5432/postgres
+  thymeleaf:
+    mode: HTML
   jpa:
     # hibernate:
     #   ddl-auto: create
     show-sql: true
-  mvc:
-    view:
-        prefix: /WEB-INF/jsp/
-        suffix: .jsp
+  # mvc:
+  #   view:
+  #       prefix: /WEB-INF/jsp/
+  #       suffix: .jsp
   # profiles:
   #   active: prod
 logging:

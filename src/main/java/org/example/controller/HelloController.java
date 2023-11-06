@@ -89,4 +89,9 @@ public class HelloController {
     public Object domainTest(){ 
         return book;
     }
+
+    @GetMapping(value = "thymeleaftest")
+    public Object thymeleafTest(){ 
+        return "test";
+    }
 }
