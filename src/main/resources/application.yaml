@@ -4,11 +4,21 @@ spring:
     username: postgres
     password: SpringBootDB369
     url: jdbc:postgresql://db.xrizljdyaoyvzcavgbol.supabase.co:5432/postgres
+  jpa:
+    # hibernate:
+    #   ddl-auto: create
+    show-sql: true
   mvc:
     view:
         prefix: /WEB-INF/jsp/
         suffix: .jsp
+  # profiles:
+  #   active: prod
 logging:
+  root: WARN
   level:
     org:
       springframework: DEBUG
+  # file: logs/logs.log
+book:
+  name: 書本一號

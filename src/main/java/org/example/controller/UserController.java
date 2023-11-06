@@ -6,11 +6,14 @@ import org.example.JPA.dao.UserDao;
 import org.example.JPA.entity.UserEntity;
 import org.example.model.request.SignUpModel;
 import org.example.model.response.UserListModel;
+import org.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -20,6 +23,9 @@ import java.util.List;
 public class UserController {
     @Autowired
     UserDao userDao;
+
+    @Autowired
+    private UserService userService;
 
     @PostMapping(value = "/signup", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void signUpAUser(@RequestBody SignUpModel model) throws JsonProcessingException {
@@ -47,6 +53,18 @@ public class UserController {
         });
         userListModel.setUserList(userList);
         return objectMapper.writeValueAsString(userListModel);
+    }
+
+    @RequestMapping("searchuser")
+    public Object searchUser(@RequestParam String keyword){
+        return userService.findByUsernameEndsWith(keyword);
+    }
+
+    //@PutMapping
+
+    @RequestMapping("JPQLTest")
+    public Object JPQLTest(@RequestParam int len){
+        return userService.findByJPQL(len);
     }
 
 }
