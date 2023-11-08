@@ -6,6 +6,7 @@ spring:
     url: jdbc:postgresql://db.xrizljdyaoyvzcavgbol.supabase.co:5432/postgres
   thymeleaf:
     mode: HTML
+  debug: true
   jpa:
     # hibernate:
     #   ddl-auto: create
@@ -22,5 +23,8 @@ logging:
     org:
       springframework: DEBUG
   # file: logs/logs.log
+  # path:
+  # pattern:
+  # config: classpath: 自定義文件<=可設定Rolling File
 book:
   name: 書本一號
