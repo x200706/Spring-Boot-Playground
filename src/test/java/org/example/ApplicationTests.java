@@ -7,6 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ApplicationTests {
 
+	//可以注入所有main目錄的組件
+
 	@Test
 	void contextLoads() {
 	}
