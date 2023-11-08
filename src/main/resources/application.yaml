@@ -9,7 +9,7 @@ spring:
   debug: true
   jpa:
     # hibernate:
-    #   ddl-auto: create
+    #   ddl-auto: create # 連接數據庫結構，常用是update
     show-sql: true
   # mvc:
   #   view:
