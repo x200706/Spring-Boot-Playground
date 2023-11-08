@@ -26,7 +26,7 @@ public class LogAspect {
     @Before("log()")
     public void doBefore(JoinPoint joinPoint) {
         System.out.println("Before Test!!");
-        
+
         ServletRequestAttributes attributes = (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         String method = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
@@ -40,7 +40,7 @@ public class LogAspect {
         System.out.println("After Test!!");
     }
 
-    @AfterReturning(returning = "result", pointcut = "log()")
+    @AfterReturning(returning = "result", pointcut = "log()") //換言之可以做統一紀錄
     public void doAfterReturning(Object result){
         System.out.println(result);
     }
