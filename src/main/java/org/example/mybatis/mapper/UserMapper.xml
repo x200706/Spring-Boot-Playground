@@ -14,6 +14,6 @@
     <select id="getAll" resultMap="BaseResultMap"  >
        SELECT 
        <include refid="Base_Column_List" />
-	   FROM user
+	   FROM "user"
     </select>
 </mapper>

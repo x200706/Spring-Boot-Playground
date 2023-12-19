@@ -30,5 +30,4 @@ book:
   name: 書本一號
 mybatis:
   # type-aliases-package: org.example.mybatis.vo
-  config-locations: classpath:src\main\java\org\example\mybatis\mybatis-config.xml
-  mapper-locations: classpath:src\main\java\org\example\mybatis\mapper\*.xml
+  mapper-locations: classpath:/org/example/mybatis/mapper/*.xml

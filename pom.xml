@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.0</version>
+            <version>2.2.2</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper -->
@@ -97,7 +97,7 @@
 
 
     </dependencies>
-    <build>
+    <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -119,5 +119,5 @@
                 </includes>
             </resource>
         </resources>
-    </build>
+    </build> -->
 </project>
